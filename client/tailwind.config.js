@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {},
     fontFamily:{
-      'myfont':['New Amsterdam', 'sans-serif']
+      'myfont':['DM Serif Text', 'sans-serif']
     }
   },
   plugins: [],

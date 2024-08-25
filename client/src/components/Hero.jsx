@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 const Hero = () => {
   const navigte = useNavigate();
   return (
-    <div className="  p-32 ">
+    <div className=" h-[800px]  p-32 ">
         
       <div className="flex justify-evenly">
         <div className="h-[300px] w-[550px] ">
@@ -50,6 +50,7 @@ const Hero = () => {
       </div>
 
     </div>
+    
   );
 };
 

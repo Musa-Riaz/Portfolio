@@ -5,9 +5,11 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { Link } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
 
 const Hero = () => {
+  const navigte = useNavigate();
   return (
     <div className="  p-32 ">
         
@@ -28,19 +30,22 @@ const Hero = () => {
             immersive and beautiful applications through carefully crafted code
             and user-centric design.
           </p>
+          <button onClick={()=>navigte('/about-me')} className="mt-5 bg-[#A53DFF] text-white h-[48px] w-[126px] text-lg rounded-lg  hover:shadow-lg transition duration-200 ease-linear hover:opacity-95">Say Hello</button>
         </div>
 
         <div
-          className="h-[400px] w-[400px] rounded-xl bg-slate-400"
-          style={{ background: "", backgroundSize: "cover" }}
+          className="h-[400px] w-[400px] rounded-xl bg-purple-100 shadow-[0_0_20px_10px_rgba(165,61,255,0.3)] "
+          style={{backgroundImage:'url(/hero_pic.png)', backgroundSize:'cover'}}
         >
-          <img src="" alt="" />
+          {/* <img className="h-[500px]" src='/hero_pic_2.png' alt="" /> */}
         </div>
+        
       </div>
+      
 
       <div className="ml-40 flex gap-2 ">
-            <Link to="" className="w-[180px] h-[50px] bg-[#A53DFF] rounded-xl hover:cursor-pointer hover:shadow-xl hover:opacity-95 flex items-center justify-center "><FaInstagram className="text-white text-4xl "/></Link>
-            <Link to="" className="w-[180px] h-[50px] bg-[#A53DFF] rounded-xl hover:cursor-pointer hover:shadow-xl hover:opacity-95 flex items-center justify-center "><FaFacebook className="text-white text-4xl "/></Link>
+            <Link to="https://www.instagram.com/" target="new" className="w-[180px] h-[50px] bg-[#A53DFF] rounded-xl hover:cursor-pointer hover:shadow-xl hover:opacity-95 flex items-center justify-center "><FaInstagram className="text-white text-4xl "/></Link>
+            <Link to="" className="w-[180px] h-[50px] bg-[#A53DFF] rounded-xl hover:cursor-pointer hover:shadow-xl hover:opacity-95 flex items-center justify-center "><FaGithub className="text-white text-4xl "/></Link>
             <Link to="" className="w-[180px] h-[50px] bg-[#A53DFF] rounded-xl hover:cursor-pointer hover:shadow-xl  hover:opacity-95 flex items-center justify-center "><FaLinkedin className="text-white text-4xl "/></Link>
       </div>
 

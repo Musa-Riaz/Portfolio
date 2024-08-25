@@ -7,8 +7,10 @@ export default {
   theme: {
     extend: {},
     fontFamily:{
-      'myfont':['DM Serif Text', 'sans-serif']
-    }
+      'myfont':['DM Serif Text', 'sans-serif'],
+      'roboto_condensed':['Roboto Condensed', 'sans-serif']
+    },
+   
   },
   plugins: [],
 }

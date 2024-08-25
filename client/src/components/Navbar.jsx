@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -9,11 +10,11 @@ const Navbar = () => {
         </div>
         <div >
             <ul className='flex gap-10 font-semibold text-lg'>
-                <li className='hover:underline hover:cursor-pointer'>Home</li>
-                <li className='hover:underline hover:cursor-pointer'>Home</li>
-                <li className='hover:underline hover:cursor-pointer'>Home</li>
-                <li className='hover:underline hover:cursor-pointer'>Home</li>
-                <li className='hover:underline hover:cursor-pointer'>Home</li>
+                <NavLink to='/' className='hover:underline hover:cursor-pointer'>Home</NavLink>
+                <NavLink to='/about-me' className='hover:underline hover:cursor-pointer '>About Me</NavLink>
+                <NavLink className='hover:underline hover:cursor-pointer '>Home</NavLink>
+                <NavLink className='hover:underline hover:cursor-pointer '>Home</NavLink>
+                <NavLink className='hover:underline hover:cursor-pointer '>Home</NavLink>
                 <button className='bg-[#A53DFF] text-white rounded-md w-32 h-10 hover:opacity-95 hover:shadow-lg '>Contact</button>
             </ul>
         </div>

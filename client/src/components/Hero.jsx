@@ -7,6 +7,8 @@ import { FaInstagram } from "react-icons/fa";
 import { Link } from 'react-router-dom'
 import { useNavigate } from "react-router-dom";
 
+import DottedButton from "./Button";
+
 
 const Hero = () => {
   const navigte = useNavigate();
@@ -30,7 +32,10 @@ const Hero = () => {
             immersive and beautiful applications through carefully crafted code
             and user-centric design.
           </p>
-          <button onClick={()=>navigte('/about-me')} className="mt-5 bg-[#A53DFF] text-white h-[48px] w-[126px] text-lg rounded-lg  hover:shadow-lg transition duration-200 ease-linear hover:opacity-95">Say Hello</button>
+          <div onClick={()=> navigte('/about-me')} className="mt-4">
+          <DottedButton>Say Hello!</DottedButton>
+          </div>
+         
         </div>
 
         <div

@@ -7,55 +7,45 @@ import { CiLaptop } from "react-icons/ci";
 
 const WorkProcess = () => {
   return (
-    <div className="bg-[#F0F1F3] ">
+    <div className=" h-[1000px] p-32 bg-[#F0F1F3] ">
       <div className=" w-[1400px] h-[650px] bg-[#F0F1F3] flex  justify-evenly  ">
-        <div className="p-32">
+        <div className="py-40 px-10 ml-10">
           <h1 className="text-6xl font-myfont">Work Process</h1>
           <p className="text-slate-700 text-lg mt-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-            laboriosam delectus odio dolor eos.
-            <br /> Reprehenderit eveniet deserunt libero quis odio sint magnam
-            sequi. Aperiam architecto amet doloremque eius, error in?
+            I believe that every task should be executed with perfect planning and dedication. To make my workspace productive and more enjoyable, I apply four principles in my work life. 
           </p>
           <p className="text-slate-700 text-lg mt-2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, amet
-            officiis! Nisi harum quod quos iste,
-            <br /> rerum molestias! Repudiandae unde sapiente fuga error optio
-            quia numquam, fugit consequatur quis similique!
+            These are the principles of Research, Design, Development and Finalization. I learned these rules in my journey of web development, which help me make user-friendly and robust web applications.
           </p>
         </div>
 
         <div className="w-[648px] h-[600px] flex gap-8 ">
-          <div className="mt-5 flex flex-col gap-8">
+          <div className="mt-16 flex flex-col gap-8">
             <WorkSpaceCards
               icon={<BiNotepad className="text-2xl text-white  " />}
-              title={"Analyze"}
+              title={"(1) Research"}
             >
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum,
-              totam?
+              I begin my work by doing some research about the project , the technologies and pacakges that will be needed.
             </WorkSpaceCards>
             <WorkSpaceCards
               icon={<GoPencil className="text-2xl text-white  " />}
-              title={"Action"}
+              title={"(2) Design"}
             >
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum,
-              totam?
+              Then I start looking at the design/wireframes to get a good idea of what the client actually desires.
             </WorkSpaceCards>
           </div>
-          <div className="mt-10 flex flex-col gap-8">
+          <div className="mt-20 flex flex-col gap-8">
             <WorkSpaceCards
               icon={<SlGraph className="text-2xl text-white  " />}
-              title={"Action"}
+              title={"(3) Development"}
             >
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum,
-              totam?
+              Finally, with all this information I can start working on the intial development phase of the project.
             </WorkSpaceCards>
             <WorkSpaceCards
               icon={<CiLaptop className="text-2xl text-white  " />}
-              title={"Action"}
+              title={"(4) Finalize"}
             >
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum,
-              totam?
+              Once development is finished, I begin to optimize my code and make it cleaner for the client to understand. 
             </WorkSpaceCards>
           </div>
         </div>

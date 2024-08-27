@@ -6,7 +6,7 @@ const Technologies = () => {
     <div className=" border  bg-[#f0f1f3]">
       <div>
         <p className="text-center text-3xl my-5 font-bold">
-          The Technologies that I use for my Projects
+           Technologies that I use 
         </p>
       </div>
 

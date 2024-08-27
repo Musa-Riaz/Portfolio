@@ -5,6 +5,7 @@ import WorkProcess from '../components/WorkProcess'
 import WhatIDo from '../components/WhatIDo'
 import Projects from '../components/Projects'
 import Technologies from '../components/Technologies'
+import ProjectIdea from '../components/ProjectIdea'
 const HomePage = () => {
   return (
     <Layout>
@@ -13,6 +14,7 @@ const HomePage = () => {
         <Projects />
         <Technologies />
         <WorkProcess />
+        <ProjectIdea />
     </Layout>
   )
 }

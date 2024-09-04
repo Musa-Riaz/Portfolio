@@ -6,6 +6,7 @@ import { IoCall } from "react-icons/io5";
 import { FaL, FaLocationDot } from "react-icons/fa6";
 import DottedButton from "../components/Button";
 import { ToastContainer, toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
   import 'react-toastify/dist/ReactToastify.css';
 import
 { message }
@@ -19,14 +20,14 @@ const ContactMe = () => {
     const[email,setEmail] = useState('');
     const [formmessage, setFormMessage] = useState('');
     const [sent, setSent] = useState(false);
-    
+    const navigate = useNavigate();
     const form = useRef();
 
     const sendEmail = (e) => {
 
         e.preventDefault();
         
-        if(name !== '' && email !== '' && formmessage !== '' ){
+        if(name !== '' || email !== '' || formmessage !== '' ){
             setSent(true);
             emailjs
             .sendForm('service_0zaedcq', 'template_fr0o4nj', form.current, {
@@ -40,7 +41,7 @@ const ContactMe = () => {
                 setEmail('')
                 setFormMessage('')
                 setSent(false);
-  
+                navigate('/')
   
               },
               (error) => {

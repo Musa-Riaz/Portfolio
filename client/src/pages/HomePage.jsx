@@ -6,6 +6,7 @@ import WhatIDo from '../components/WhatIDo'
 import Projects from '../components/Projects'
 import Technologies from '../components/Technologies'
 import ProjectIdea from '../components/ProjectIdea'
+import { motion } from "framer-motion"
 const HomePage = () => {
   return (
     <Layout>

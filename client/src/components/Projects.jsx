@@ -1,6 +1,8 @@
 import React from "react";
 import ProjectCards from "./ProjectCards";
+import {useState, useEffect} from 'react'
 import Reveal from "../../animations/Reveal";
+import axios from 'axios'
 import { useNavigation } from "react-router-dom";
 import {
   getStorage,
@@ -11,6 +13,9 @@ import {
 import { storage } from "../services/firebase";
 
 const Projects = () => {
+
+  const [projects, setProjects] = useState();
+
   const uploadImage = (file) => {
     const storageRef = ref(storage, file.name);
     const uploadTask = uploadBytesResumable(storageRef, file);
@@ -40,6 +45,30 @@ const Projects = () => {
     );
   };
 
+  
+
+  const handleGetProjects = async ()=>{
+
+    try{
+
+      const res = await axios.get('http://localhost:3200/api/v1/project/get-all-projects');
+      if(res){
+        setProjects(res.data.projects);
+        
+      }
+    }
+    catch(err){
+      console.log(err);
+    }
+
+  }
+  useEffect(() => {
+    
+    
+    handleGetProjects();
+    
+  }, []);
+
   return (
     <div className="h-[1500px] bg-white">
       <div className="h-[128px]">
@@ -54,9 +83,22 @@ const Projects = () => {
       </div>
 
       <div className="h-[976px] mt-10 flex gap-8 flex-wrap  justify-center">
-        <Reveal>
+{/* Fix the card not showing issue */}
+        {projects &&
+          projects?.map((project) => (
+            
+            <Reveal key={project?._id} >
+              <ProjectCards title={project?.name} image={project?.imageUrl}>
+                {project?.description.length > 80 ? `${project?.description.substring(0, 80)}...` : project?.description }
+              </ProjectCards>
+            </Reveal>
+            
+          ))
+        }
+
+        {/* <Reveal>
           {" "}
-          <ProjectCards title={"MernMart"} image={"/test.jpg"}>
+          <ProjectCards title={"asda"} image={"/test.jpg"}>
             This is a project that I made This is a project that I made This is
             a project that I made
           </ProjectCards>
@@ -95,7 +137,7 @@ const Projects = () => {
             This is a project that I made This is a project that I made This is
             a project that I made
           </ProjectCards>
-        </Reveal>
+        </Reveal> */}
       </div>
     </div>
   );

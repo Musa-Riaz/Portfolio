@@ -43,3 +43,28 @@ exports.createProjectController = async (req, res, next) => {
   }
   next();
 };
+
+
+exports.getSingleProjectController = async(req, res) =>{
+try{
+    
+  const project = await projectModel.findById(req.params.id);
+  if(project){
+    res.status(200).json({
+      success:true,
+      message:"Project Fetched",
+      project
+    });
+  }
+  else{
+    res.status(400).json({
+      success:false,
+      message:"Unable to find the project"
+    })
+  }
+
+}
+catch(err){
+  console.log(err);
+}
+}

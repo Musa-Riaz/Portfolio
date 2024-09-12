@@ -1,6 +1,12 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
-const ProjectCards = ({image, title, children}) => {
+const ProjectCards = ({title, image, children}) => {
+
+  const navigate = useNavigate();
+
+  
   return (
     <div className='h-[480px] w-[430]  rounded-xl shadow-2xl hover:cursor-pointer transform transition-transform duration-500 hover:-translate-y-2 hover:scale-105'>
         <div className='w-[480px] h-[248px] rounded-t-xl ' style={{backgroundImage:`url(${image})`, backgroundSize:'cover'}}></div>
@@ -10,9 +16,10 @@ const ProjectCards = ({image, title, children}) => {
                 {title}
             </h2>
             <p className="mt-2 ">
+
                 {children}
             </p>
-            <button className="mt-5 bg-white border border-[#A53DFF] text-[#A53DFF] h-[48px] w-[173px] text-lg rounded-lg  hover:shadow-lg transition duration-200 ease-linear hover:opacity-95">View Details  &#x2192;</button>
+            <button onClick={()=>navigate('/details')} className="mt-5 bg-white border border-[#A53DFF] text-[#A53DFF] h-[48px] w-[173px] text-lg rounded-lg  hover:shadow-lg transition duration-200 ease-linear hover:opacity-95">View Details  &#x2192;</button>
         </div>
        
       

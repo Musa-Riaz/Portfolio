@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 
-const ProjectCards = ({title, image, children}) => {
+const ProjectCards = ({title, image, children, id}) => {
 
   const navigate = useNavigate();
 
@@ -19,7 +19,7 @@ const ProjectCards = ({title, image, children}) => {
 
                 {children}
             </p>
-            <button onClick={()=>navigate('/details')} className="mt-5 bg-white border border-[#A53DFF] text-[#A53DFF] h-[48px] w-[173px] text-lg rounded-lg  hover:shadow-lg transition duration-200 ease-linear hover:opacity-95">View Details  &#x2192;</button>
+            <button onClick={()=>navigate(`/details/${id}`)} className="mt-5 bg-white border border-[#A53DFF] text-[#A53DFF] h-[48px] w-[173px] text-lg rounded-lg  hover:shadow-lg transition duration-200 ease-linear hover:opacity-95">View Details  &#x2192;</button>
         </div>
        
       

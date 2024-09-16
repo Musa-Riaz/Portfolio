@@ -7,8 +7,10 @@ import { FaFacebook } from "react-icons/fa";
 import { LiaDownloadSolid } from "react-icons/lia";
 import { Link } from "react-router-dom";
 import { GrProjects } from "react-icons/gr";
-import {download} from 'download-pdf';
+import { useNavigate } from "react-router-dom";
+import Reveal from "../../animations/Reveal";
 const AboutMe = () => {
+  const navigate = useNavigate();
 
     const CV_PDF_FILE = 'http://localhost:5173/Musa_Riaz_CV_2024.pdf';
 
@@ -28,6 +30,7 @@ const AboutMe = () => {
 
   return (
     <Layout>
+      <Reveal>
       <div className="flex p-32 justify-evenly gap-4">
         <div
           style={{
@@ -85,7 +88,7 @@ const AboutMe = () => {
             user-friendly web applications.{" "}
           </p>
           <div className="flex gap-4 mt-3">
-            <button className="w-[130px] h-[45px] hover:shadow-xl duration-500  bg-[#A53DFF] rounded-lg text-white flex items-center justify-center gap-4">
+            <button onClick={()=>navigate('/')} className="w-[130px] h-[45px] hover:shadow-xl duration-500  bg-[#A53DFF] rounded-lg text-white flex items-center justify-center gap-4">
               {" "}
               <GrProjects />
               My Projects
@@ -98,6 +101,7 @@ const AboutMe = () => {
           </div>
         </div>
       </div>
+      </Reveal>
     </Layout>
   );
 };

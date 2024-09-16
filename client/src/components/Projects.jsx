@@ -88,7 +88,7 @@ const Projects = () => {
           projects?.map((project) => (
             
             <Reveal key={project?._id} >
-              <ProjectCards title={project?.name} image={project?.imageUrl}>
+              <ProjectCards title={project?.name} image={project?.imageUrl} id={project?._id}>
                 {project?.description.length > 80 ? `${project?.description.substring(0, 80)}...` : project?.description }
               </ProjectCards>
             </Reveal>

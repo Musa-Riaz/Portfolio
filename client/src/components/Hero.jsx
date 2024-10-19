@@ -76,7 +76,7 @@ const Hero = () => {
           {" "}
           <motion.div whileHover={{ scale: 1.2 }}>
             <Link
-              to=""
+              to="https://github.com/Musa-Riaz"
               className="w-[180px] h-[50px] bg-[#A53DFF] rounded-xl hover:cursor-pointer hover:shadow-xl hover:opacity-95 flex items-center justify-center "
             >
               <FaGithub className="text-white text-4xl " />
@@ -87,7 +87,7 @@ const Hero = () => {
           {" "}
           <motion.div whileHover={{ scale: 1.2 }}>
             <Link
-              to=""
+              to="www.linkedin.com/in/musariaz"
               className="w-[180px] h-[50px] bg-[#A53DFF] rounded-xl hover:cursor-pointer hover:shadow-xl  hover:opacity-95 flex items-center justify-center "
             >
               <FaLinkedin className="text-white text-4xl " />

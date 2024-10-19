@@ -48,14 +48,14 @@ const AboutMe = () => {
               <FaFacebook />
             </Link>
             <Link
-              to=""
+              to="https://github.com/Musa-Riaz"
               className="hover:shadow-xl transition-shadow rounded-lg"
             >
               {" "}
               <FaGithub />
             </Link>
             <Link
-              to=""
+              to="www.linkedin.com/in/musariaz"
               className="hover:shadow-xl transition-shadow rounded-lg"
             >
               {" "}

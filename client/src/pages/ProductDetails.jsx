@@ -12,7 +12,7 @@ const ProductDetails = () => {
   const handleGetProject = async () => {
     try {
       const res = await axios.get(
-        `https://portfolio-frontend-2-theta.vercel.app/api/v1/project/get-project/${id}`
+        `https://portfolio-backend-2-six.vercel.app/api/v1/project/get-project/${id}`
       );
       if (res) {
         setProject(res.data.project);

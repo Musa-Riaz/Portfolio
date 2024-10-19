@@ -25,12 +25,6 @@ app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use("/", (req, res) => {
-  res.send({
-    status:200,
-    message:"Server setup successfully"
-  })
-})
 
 app.use("/api/v1/project", projectRoutes);
 

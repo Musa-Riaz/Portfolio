@@ -19,7 +19,7 @@ mongoose
   .catch((err) => console.log(err));
 
 //middleware setup
-app.use(cors({ credentials: true, origin: "https://portfolio-backend-2-six.vercel.app/" }));
+app.use(cors({ credentials: true, origin: "https://portfolio-backend-2-six.vercel.app" }));
 app.use(morgan("dev"));
 // Middleware to parse URL-encoded form data
 app.use(express.urlencoded({ extended: true }));

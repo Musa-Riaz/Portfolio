@@ -12,7 +12,7 @@ import Reveal from "../../animations/Reveal";
 const AboutMe = () => {
   const navigate = useNavigate();
 
-    const CV_PDF_FILE = 'http://localhost:5173/Musa_Riaz_CV_2024.pdf';
+    const CV_PDF_FILE = 'https://portfolio-backend-2-six.vercel.app/Musa_Riaz_CV_2024.pdf';
 
     const handleDownloadCV = () => {
         try{

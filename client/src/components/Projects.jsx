@@ -51,7 +51,7 @@ const Projects = () => {
 
     try{
 
-      const res = await axios.get('https://portfolio-backend-2-six.vercel.app/api/v1/project/get-all-projects');
+      const res = await axios.get('https://portfolio-frontend-2-theta.vercel.app/api/v1/project/get-all-projects');
       if(res){
         setProjects(res.data.projects);
         

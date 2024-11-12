@@ -18,7 +18,7 @@ const AboutMe = () => {
         try{
             const link = document.createElement("a");
             link.href = CV_PDF_FILE;
-            link.download = "Musa_Riaz_CV.pdf"; // specify the filename
+            link.download = "MusaRiaz_RESUME_2024.pdf"; // specify the filename
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
